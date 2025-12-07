@@ -1,0 +1,32 @@
+{
+  "name": "@tools.org.ai/messaging",
+  "version": "0.0.1",
+  "description": "Messaging tool - aggregates slack, twilio providers",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "digital-tools": "workspace:*",
+    "@tools.org.ai/slack": "workspace:*",
+    "@tools.org.ai/twilio": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": ["messaging", "slack", "sms", "chat", "ai", "tools"],
+  "license": "MIT"
+}
