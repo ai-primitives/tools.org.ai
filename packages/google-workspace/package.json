@@ -1,0 +1,30 @@
+{
+  "name": "@tools.org.ai/google-workspace",
+  "version": "0.0.1",
+  "description": "Google Workspace provider - implements Spreadsheet, Document, Email, Calendar, Storage, Meetings interfaces",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "digital-tools": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": ["google", "sheets", "docs", "gmail", "calendar", "drive", "meet", "ai", "tools"],
+  "license": "MIT"
+}
