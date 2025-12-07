@@ -1,0 +1,33 @@
+{
+  "name": "@tools.org.ai/projects",
+  "version": "0.0.1",
+  "description": "Projects tool - aggregates github, linear, notion providers",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "digital-tools": "workspace:*",
+    "@tools.org.ai/github": "workspace:*",
+    "@tools.org.ai/linear": "workspace:*",
+    "@tools.org.ai/notion": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": ["projects", "boards", "sprints", "roadmaps", "ai", "tools"],
+  "license": "MIT"
+}

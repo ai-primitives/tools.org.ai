@@ -1,0 +1,30 @@
+{
+  "name": "@tools.org.ai/github",
+  "version": "0.0.1",
+  "description": "GitHub provider - implements Repo, Task, Project, Document interfaces",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "digital-tools": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": ["github", "repo", "task", "issue", "project", "gist", "ai", "tools"],
+  "license": "MIT"
+}
