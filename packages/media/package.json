@@ -1,0 +1,31 @@
+{
+  "name": "@tools.org.ai/media",
+  "version": "0.0.1",
+  "description": "Media tool - aggregates cloudinary provider",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "digital-tools": "workspace:*",
+    "@tools.org.ai/cloudinary": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": ["media", "images", "video", "transform", "ai", "tools"],
+  "license": "MIT"
+}
