@@ -1,0 +1,33 @@
+{
+  "name": "@tools.org.ai/documents",
+  "version": "0.0.1",
+  "description": "Documents tool - aggregates google-workspace, office-365, notion providers",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "digital-tools": "workspace:*",
+    "@tools.org.ai/google-workspace": "workspace:*",
+    "@tools.org.ai/office-365": "workspace:*",
+    "@tools.org.ai/notion": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": ["documents", "docs", "word", "pages", "wiki", "ai", "tools"],
+  "license": "MIT"
+}
