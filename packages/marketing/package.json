@@ -1,0 +1,31 @@
+{
+  "name": "@tools.org.ai/marketing",
+  "version": "0.0.1",
+  "description": "Marketing tool - aggregates mailchimp provider",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "digital-tools": "workspace:*",
+    "@tools.org.ai/mailchimp": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": ["marketing", "campaigns", "audiences", "newsletters", "ai", "tools"],
+  "license": "MIT"
+}
