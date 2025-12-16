@@ -1,0 +1,41 @@
+{
+  "name": "@tools.org.ai/beads",
+  "version": "0.0.1",
+  "description": "Beads provider - SQLite-based work item tracking with Drizzle ORM",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./schema": {
+      "import": "./dist/schema.js",
+      "types": "./dist/schema.d.ts"
+    },
+    "./adapter": {
+      "import": "./dist/adapter.js",
+      "types": "./dist/adapter.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/schema.ts src/adapter.ts --format esm --dts",
+    "dev": "tsup src/index.ts src/schema.ts src/adapter.ts --format esm --dts --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.36.0",
+    "better-sqlite3": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": ["beads", "issue", "work-item", "sqlite", "drizzle", "ai", "tools", "planning"],
+  "license": "MIT"
+}
